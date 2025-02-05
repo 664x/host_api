@@ -1,32 +1,71 @@
-[
-  {
-    "id": 1,
-    "title": "Create Flutter Project",
-    "description": "Set up a new Flutter project for your app.",
-    "completed": false
-  },
-  {
-    "id": 2,
-    "title": "Design UI",
-    "description": "Design the user interface for your Flutter app.",
-    "completed": false
-  },
-  {
-    "id": 3,
-    "title": "Implement Task List",
-    "description": "Create a task list view in your Flutter app.",
-    "completed": false
-  },
-  {
-    "id": 4,
-    "title": "Add Task Detail Page",
-    "description": "Implement a task detail page for each task in the list.",
-    "completed": false
-  },
-  {
-    "id": 5,
-    "title": "Add Task Editing",
-    "description": "Allow users to edit and update task details.",
-    "completed": false
-  }
-]
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  // Aqui, você pode retornar os dados JSON que você mencionou
+  res.json([{
+    "user": {
+      "id": "274655533678460929",
+      "username": "646x",
+      "global_name": null,
+      "avatar": "f3a65ffea69bcaad74f6327695d28553",
+      "avatar_decoration_data": null,
+      "discriminator": "0",
+      "public_flags": 0,
+      "primary_guild": null,
+      "clan": null,
+      "flags": 0,
+      "banner": null,
+      "banner_color": "#101113",
+      "accent_color": 1052947,
+      "bio": ""
+    },
+    "connected_accounts": [],
+    "premium_since": "2024-07-08T21:45:41.866097+00:00",
+    "premium_type": 2,
+    "premium_guild_since": "2022-09-10T12:39:34.453000+00:00",
+    "profile_themes_experiment_bucket": 4,
+    "user_profile": {
+      "bio": "",
+      "accent_color": 1052947,
+      "pronouns": "",
+      "profile_effect": null,
+      "banner": null,
+      "theme_colors": [1184278, 526345],
+      "popout_animation_particle_type": null,
+      "emoji": null
+    },
+    "badges": [
+      {
+        "id": "premium",
+        "description": "Assinante desde 8 de jul. de 2024",
+        "icon": "2ba85e8026a8614b640c2837bcdfe21b",
+        "link": "https://discord.com/settings/premium"
+      },
+      {
+        "id": "early_supporter",
+        "description": "Apoiador Inicial Premium",
+        "icon": "https://raw.githubusercontent.com/mezotv/discord-badges/main/assets/discordearlysupporter.svg",
+        "link": "https://discord.com/settings/premium"
+      },
+      {
+        "id": "guild_booster_lvl2",
+        "description": "Impulsionando o servidor desde 17 de nov. de 2024",
+        "icon": "ec92202290b48d0879b7413d2dde3bab",
+        "link": "https://discord.com/settings/premium"
+      },
+      {
+        "id": "quest_completed",
+        "description": "Completou uma Missão",
+        "icon": "7d9ae358c8c5e118768335dbe68b4fb8",
+        "link": "https://discord.com/discovery/quests"
+      }
+    ],
+    "guild_badges": []
+  }]);
+});
+
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
+});
